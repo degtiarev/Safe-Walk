@@ -1,14 +1,44 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Safe_Walk_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <timer width="1" height="0.29999999999999999" alignment="center" verticalAlignment="center" textAlignment="center" id="rqO-UA-PXg">
+                            <fontDescription key="font" type="system" pointSize="27"/>
+                        </timer>
+                        <group width="1" height="0.29999999999999999" alignment="center" verticalAlignment="center" id="Uki-Je-0SL">
+                            <items>
+                                <label width="0.69999999999999996" height="1" alignment="left" verticalAlignment="center" text="Safe mode: " textAlignment="center" id="jcr-Lp-tae"/>
+                                <label width="0.29999999999999999" height="1" alignment="right" text="On" textAlignment="right" id="G4o-FB-lIL"/>
+                            </items>
+                        </group>
+                    </items>
+                    <menu key="menu" id="g3L-q8-qdD">
+                        <items>
+                            <menuItem title="Start" icon="accept" id="0yD-hy-06j">
+                                <connections>
+                                    <action selector="startButtonPressed" destination="AgC-eL-Hgc" id="jIe-rr-Zfq"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Stop" icon="decline" id="WRs-Hi-QFw">
+                                <connections>
+                                    <action selector="stopButtonPressed" destination="AgC-eL-Hgc" id="XDg-Wc-FDO"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
@@ -31,7 +61,7 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Safe_Walk_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
