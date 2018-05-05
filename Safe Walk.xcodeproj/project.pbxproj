@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC5D7254209E12D500A695B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D7253209E12D500A695B6 /* AppDelegate.swift */; };
+		DC5D7256209E12D500A695B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D7255209E12D500A695B6 /* ViewController.swift */; };
+		DC5D7259209E12D500A695B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5D7257209E12D500A695B6 /* Main.storyboard */; };
+		DC5D725B209E12D800A695B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5D725A209E12D800A695B6 /* Assets.xcassets */; };
+		DC5D725E209E12D800A695B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5D725C209E12D800A695B6 /* LaunchScreen.storyboard */; };
+		DC5D7263209E12D800A695B6 /* Safe Walk WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DC5D7262209E12D800A695B6 /* Safe Walk WatchKit App.app */; };
+		DC5D7269209E12D800A695B6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5D7267209E12D800A695B6 /* Interface.storyboard */; };
+		DC5D726B209E12D900A695B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5D726A209E12D900A695B6 /* Assets.xcassets */; };
+		DC5D7272209E12D900A695B6 /* Safe Walk WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DC5D7271209E12D900A695B6 /* Safe Walk WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DC5D7277209E12D900A695B6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D7276209E12D900A695B6 /* InterfaceController.swift */; };
+		DC5D7279209E12D900A695B6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D7278209E12D900A695B6 /* ExtensionDelegate.swift */; };
+		DC5D727B209E12D900A695B6 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D727A209E12D900A695B6 /* NotificationController.swift */; };
+		DC5D727D209E12D900A695B6 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D727C209E12D900A695B6 /* ComplicationController.swift */; };
+		DC5D727F209E12D900A695B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5D727E209E12D900A695B6 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC5D7264209E12D800A695B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC5D7248209E12D500A695B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC5D7261209E12D800A695B6;
+			remoteInfo = "Safe Walk WatchKit App";
+		};
+		DC5D7273209E12D900A695B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC5D7248209E12D500A695B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC5D7270209E12D900A695B6;
+			remoteInfo = "Safe Walk WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DC5D7287209E12DA00A695B6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DC5D7272209E12D900A695B6 /* Safe Walk WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC5D728B209E12DA00A695B6 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				DC5D7263209E12D800A695B6 /* Safe Walk WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DC5D7250209E12D500A695B6 /* Safe Walk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Safe Walk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC5D7253209E12D500A695B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC5D7255209E12D500A695B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC5D7258209E12D500A695B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC5D725A209E12D800A695B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC5D725D209E12D800A695B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC5D725F209E12D800A695B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC5D7262209E12D800A695B6 /* Safe Walk WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Safe Walk WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC5D7268209E12D800A695B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		DC5D726A209E12D900A695B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC5D726C209E12D900A695B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC5D7271209E12D900A695B6 /* Safe Walk WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Safe Walk WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC5D7276209E12D900A695B6 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		DC5D7278209E12D900A695B6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		DC5D727A209E12D900A695B6 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		DC5D727C209E12D900A695B6 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		DC5D727E209E12D900A695B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC5D7280209E12D900A695B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC5D7281209E12DA00A695B6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC5D724D209E12D500A695B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC5D726E209E12D900A695B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC5D7247209E12D500A695B6 = {
+			isa = PBXGroup;
+			children = (
+				DC5D7252209E12D500A695B6 /* Safe Walk */,
+				DC5D7266209E12D800A695B6 /* Safe Walk WatchKit App */,
+				DC5D7275209E12D900A695B6 /* Safe Walk WatchKit Extension */,
+				DC5D7251209E12D500A695B6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC5D7251209E12D500A695B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC5D7250209E12D500A695B6 /* Safe Walk.app */,
+				DC5D7262209E12D800A695B6 /* Safe Walk WatchKit App.app */,
+				DC5D7271209E12D900A695B6 /* Safe Walk WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC5D7252209E12D500A695B6 /* Safe Walk */ = {
+			isa = PBXGroup;
+			children = (
+				DC5D7253209E12D500A695B6 /* AppDelegate.swift */,
+				DC5D7255209E12D500A695B6 /* ViewController.swift */,
+				DC5D7257209E12D500A695B6 /* Main.storyboard */,
+				DC5D725A209E12D800A695B6 /* Assets.xcassets */,
+				DC5D725C209E12D800A695B6 /* LaunchScreen.storyboard */,
+				DC5D725F209E12D800A695B6 /* Info.plist */,
+			);
+			path = "Safe Walk";
+			sourceTree = "<group>";
+		};
+		DC5D7266209E12D800A695B6 /* Safe Walk WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				DC5D7267209E12D800A695B6 /* Interface.storyboard */,
+				DC5D726A209E12D900A695B6 /* Assets.xcassets */,
+				DC5D726C209E12D900A695B6 /* Info.plist */,
+			);
+			path = "Safe Walk WatchKit App";
+			sourceTree = "<group>";
+		};
+		DC5D7275209E12D900A695B6 /* Safe Walk WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DC5D7276209E12D900A695B6 /* InterfaceController.swift */,
+				DC5D7278209E12D900A695B6 /* ExtensionDelegate.swift */,
+				DC5D727A209E12D900A695B6 /* NotificationController.swift */,
+				DC5D727C209E12D900A695B6 /* ComplicationController.swift */,
+				DC5D727E209E12D900A695B6 /* Assets.xcassets */,
+				DC5D7280209E12D900A695B6 /* Info.plist */,
+				DC5D7281209E12DA00A695B6 /* PushNotificationPayload.apns */,
+			);
+			path = "Safe Walk WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC5D724F209E12D500A695B6 /* Safe Walk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC5D728C209E12DA00A695B6 /* Build configuration list for PBXNativeTarget "Safe Walk" */;
+			buildPhases = (
+				DC5D724C209E12D500A695B6 /* Sources */,
+				DC5D724D209E12D500A695B6 /* Frameworks */,
+				DC5D724E209E12D500A695B6 /* Resources */,
+				DC5D728B209E12DA00A695B6 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC5D7265209E12D800A695B6 /* PBXTargetDependency */,
+			);
+			name = "Safe Walk";
+			productName = "Safe Walk";
+			productReference = DC5D7250209E12D500A695B6 /* Safe Walk.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC5D7261209E12D800A695B6 /* Safe Walk WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC5D7288209E12DA00A695B6 /* Build configuration list for PBXNativeTarget "Safe Walk WatchKit App" */;
+			buildPhases = (
+				DC5D7260209E12D800A695B6 /* Resources */,
+				DC5D7287209E12DA00A695B6 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC5D7274209E12D900A695B6 /* PBXTargetDependency */,
+			);
+			name = "Safe Walk WatchKit App";
+			productName = "Safe Walk WatchKit App";
+			productReference = DC5D7262209E12D800A695B6 /* Safe Walk WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		DC5D7270209E12D900A695B6 /* Safe Walk WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC5D7284209E12DA00A695B6 /* Build configuration list for PBXNativeTarget "Safe Walk WatchKit Extension" */;
+			buildPhases = (
+				DC5D726D209E12D900A695B6 /* Sources */,
+				DC5D726E209E12D900A695B6 /* Frameworks */,
+				DC5D726F209E12D900A695B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Safe Walk WatchKit Extension";
+			productName = "Safe Walk WatchKit Extension";
+			productReference = DC5D7271209E12D900A695B6 /* Safe Walk WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC5D7248209E12D500A695B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Aleksei Degtiarev";
+				TargetAttributes = {
+					DC5D724F209E12D500A695B6 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					DC5D7261209E12D800A695B6 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					DC5D7270209E12D900A695B6 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = DC5D724B209E12D500A695B6 /* Build configuration list for PBXProject "Safe Walk" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC5D7247209E12D500A695B6;
+			productRefGroup = DC5D7251209E12D500A695B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC5D724F209E12D500A695B6 /* Safe Walk */,
+				DC5D7261209E12D800A695B6 /* Safe Walk WatchKit App */,
+				DC5D7270209E12D900A695B6 /* Safe Walk WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC5D724E209E12D500A695B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC5D725E209E12D800A695B6 /* LaunchScreen.storyboard in Resources */,
+				DC5D725B209E12D800A695B6 /* Assets.xcassets in Resources */,
+				DC5D7259209E12D500A695B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC5D7260209E12D800A695B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC5D726B209E12D900A695B6 /* Assets.xcassets in Resources */,
+				DC5D7269209E12D800A695B6 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC5D726F209E12D900A695B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC5D727F209E12D900A695B6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC5D724C209E12D500A695B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC5D7256209E12D500A695B6 /* ViewController.swift in Sources */,
+				DC5D7254209E12D500A695B6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC5D726D209E12D900A695B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC5D727B209E12D900A695B6 /* NotificationController.swift in Sources */,
+				DC5D727D209E12D900A695B6 /* ComplicationController.swift in Sources */,
+				DC5D7279209E12D900A695B6 /* ExtensionDelegate.swift in Sources */,
+				DC5D7277209E12D900A695B6 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC5D7265209E12D800A695B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC5D7261209E12D800A695B6 /* Safe Walk WatchKit App */;
+			targetProxy = DC5D7264209E12D800A695B6 /* PBXContainerItemProxy */;
+		};
+		DC5D7274209E12D900A695B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC5D7270209E12D900A695B6 /* Safe Walk WatchKit Extension */;
+			targetProxy = DC5D7273209E12D900A695B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC5D7257209E12D500A695B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC5D7258209E12D500A695B6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC5D725C209E12D800A695B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC5D725D209E12D800A695B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DC5D7267209E12D800A695B6 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC5D7268209E12D800A695B6 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC5D7282209E12DA00A695B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DC5D7283209E12DA00A695B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC5D7285209E12DA00A695B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z8822C26BQ;
+				INFOPLIST_FILE = "Safe Walk WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "delexa.Safe-Walk.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		DC5D7286209E12DA00A695B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z8822C26BQ;
+				INFOPLIST_FILE = "Safe Walk WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "delexa.Safe-Walk.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		DC5D7289209E12DA00A695B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z8822C26BQ;
+				IBSC_MODULE = Safe_Walk_WatchKit_Extension;
+				INFOPLIST_FILE = "Safe Walk WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "delexa.Safe-Walk.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		DC5D728A209E12DA00A695B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z8822C26BQ;
+				IBSC_MODULE = Safe_Walk_WatchKit_Extension;
+				INFOPLIST_FILE = "Safe Walk WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "delexa.Safe-Walk.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		DC5D728D209E12DA00A695B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z8822C26BQ;
+				INFOPLIST_FILE = "Safe Walk/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "delexa.Safe-Walk";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC5D728E209E12DA00A695B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z8822C26BQ;
+				INFOPLIST_FILE = "Safe Walk/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "delexa.Safe-Walk";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC5D724B209E12D500A695B6 /* Build configuration list for PBXProject "Safe Walk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC5D7282209E12DA00A695B6 /* Debug */,
+				DC5D7283209E12DA00A695B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC5D7284209E12DA00A695B6 /* Build configuration list for PBXNativeTarget "Safe Walk WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC5D7285209E12DA00A695B6 /* Debug */,
+				DC5D7286209E12DA00A695B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC5D7288209E12DA00A695B6 /* Build configuration list for PBXNativeTarget "Safe Walk WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC5D7289209E12DA00A695B6 /* Debug */,
+				DC5D728A209E12DA00A695B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC5D728C209E12DA00A695B6 /* Build configuration list for PBXNativeTarget "Safe Walk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC5D728D209E12DA00A695B6 /* Debug */,
+				DC5D728E209E12DA00A695B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC5D7248209E12D500A695B6 /* Project object */;
+}
