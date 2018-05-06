@@ -55,6 +55,9 @@ class InterfaceController: WKInterfaceController {
     var session: HKWorkoutSession?
     
     
+    // Arrays for prediction
+    var gyroXData = [Double]()
+    var accYData = [Double]()
     
     // MARK - WKInterfaceController events
     
@@ -118,16 +121,43 @@ class InterfaceController: WKInterfaceController {
                 
                 let currenTime = self.returnCurrentTime()
                 let GyroX = deviceMotion!.rotationRate.x
-                let GyroY = deviceMotion!.rotationRate.y
-                let GyroZ = deviceMotion!.rotationRate.z
+                //                let GyroY = deviceMotion!.rotationRate.y
+                //                let GyroZ = deviceMotion!.rotationRate.z
                 
-                let AccX = deviceMotion!.gravity.x + deviceMotion!.userAcceleration.x;
+                //                let AccX = deviceMotion!.gravity.x + deviceMotion!.userAcceleration.x;
                 let AccY = deviceMotion!.gravity.y + deviceMotion!.userAcceleration.y;
-                let AccZ = deviceMotion!.gravity.z + deviceMotion!.userAcceleration.z;
+                //                let AccZ = deviceMotion!.gravity.z + deviceMotion!.userAcceleration.z;
+                //                print ( "Time: \(currenTime) GyroX:\(GyroX), AccY:\(AccY)")
+                //                print ( "Gyro: \(currenTime) \(GyroX), \(GyroY), \(GyroZ)")
+                //                print ( "Acc : \(currenTime) \(AccX), \(AccY), \(AccZ)")
                 
-                print ( "Gyro: \(currenTime) \(GyroX), \(GyroY), \(GyroZ)")
-                print ( "Acc : \(currenTime) \(AccX), \(AccY), \(AccZ)")
                 
+                self.addData(gyroXValue: GyroX, accYValue: AccY)
+                let data = self.gyroXData + self.accYData
+                if data.count == 24 {
+                    
+                    guard let mlMultiArray = try? MLMultiArray(shape:[24], dataType:MLMultiArrayDataType.double) else {
+                        fatalError("Unexpected runtime error. MLMultiArray")
+                    }
+                    
+                    for (index, element) in data.enumerated() {
+                        mlMultiArray[index] = NSNumber(value: element)
+                    }
+                    
+                    
+                    if let result = try? Classifier().makePrediction(mlMultiArray) {
+                        
+                        //                        print(result)
+                        //
+                        //                        if result != MovementType.Safe {
+                        //                            WKInterfaceDevice.current().play(.click)
+                        //                        }
+                        
+                        
+                    }
+                    
+                    
+                }
                 
             }
         }
@@ -197,5 +227,23 @@ class InterfaceController: WKInterfaceController {
         statusLabel.setText("On")
         timer.setDate(Date(timeIntervalSinceNow: 0.0))
         timer.start()
+    }
+    
+    
+    
+    func addData(gyroXValue: Double, accYValue: Double) {
+        
+        if gyroXData.count == 12 {
+            //            data.removeAll()
+            gyroXData.removeFirst()
+        }
+        gyroXData.append(gyroXValue)
+        
+        
+        if accYData.count == 12 {
+            //            data.removeAll()
+            accYData.removeFirst()
+        }
+        accYData.append(accYValue)
     }
 }
