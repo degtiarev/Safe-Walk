@@ -15,7 +15,7 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Safe_Walk_WatchKit_App" customModuleProvider="target">
                     <items>
                         <timer width="1" height="0.29999999999999999" alignment="center" verticalAlignment="center" textAlignment="center" id="rqO-UA-PXg">
-                            <fontDescription key="font" type="system" pointSize="27"/>
+                            <fontDescription key="font" type="system" pointSize="34"/>
                         </timer>
                         <group width="1" height="0.29999999999999999" alignment="center" verticalAlignment="center" id="Uki-Je-0SL">
                             <items>
@@ -38,6 +38,10 @@
                             </menuItem>
                         </items>
                     </menu>
+                    <connections>
+                        <outlet property="statusLabel" destination="G4o-FB-lIL" id="W40-gq-RA9"/>
+                        <outlet property="timer" destination="rqO-UA-PXg" id="Idz-pl-f4k"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>

@@ -21,6 +21,7 @@
 		DC5D727B209E12D900A695B6 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D727A209E12D900A695B6 /* NotificationController.swift */; };
 		DC5D727D209E12D900A695B6 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D727C209E12D900A695B6 /* ComplicationController.swift */; };
 		DC5D727F209E12D900A695B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5D727E209E12D900A695B6 /* Assets.xcassets */; };
+		DC5D7291209E7CEF00A695B6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5D7290209E7CEF00A695B6 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		DC5D727E209E12D900A695B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC5D7280209E12D900A695B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC5D7281209E12DA00A695B6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		DC5D7290209E7CEF00A695B6 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		DC5D7292209E7CEF00A695B6 /* Safe Walk WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Safe Walk WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC5D7291209E7CEF00A695B6 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +116,7 @@
 				DC5D7266209E12D800A695B6 /* Safe Walk WatchKit App */,
 				DC5D7275209E12D900A695B6 /* Safe Walk WatchKit Extension */,
 				DC5D7251209E12D500A695B6 /* Products */,
+				DC5D728F209E7CEF00A695B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +156,7 @@
 		DC5D7275209E12D900A695B6 /* Safe Walk WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				DC5D7292209E7CEF00A695B6 /* Safe Walk WatchKit Extension.entitlements */,
 				DC5D7276209E12D900A695B6 /* InterfaceController.swift */,
 				DC5D7278209E12D900A695B6 /* ExtensionDelegate.swift */,
 				DC5D727A209E12D900A695B6 /* NotificationController.swift */,
@@ -160,6 +166,14 @@
 				DC5D7281209E12DA00A695B6 /* PushNotificationPayload.apns */,
 			);
 			path = "Safe Walk WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		DC5D728F209E7CEF00A695B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC5D7290209E7CEF00A695B6 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +250,14 @@
 					};
 					DC5D7270209E12D900A695B6 = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes.watchos.extension = {
+								enabled = 1;
+							};
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -471,6 +493,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Safe Walk WatchKit Extension/Safe Walk WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8822C26BQ;
 				INFOPLIST_FILE = "Safe Walk WatchKit Extension/Info.plist";
@@ -493,6 +516,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Safe Walk WatchKit Extension/Safe Walk WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8822C26BQ;
 				INFOPLIST_FILE = "Safe Walk WatchKit Extension/Info.plist";
