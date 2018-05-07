@@ -119,7 +119,7 @@ class InterfaceController: WKInterfaceController {
             
             if deviceMotion != nil {
                 
-                let currenTime = self.returnCurrentTime()
+                //                let currenTime = self.returnCurrentTime()
                 let GyroX = deviceMotion!.rotationRate.x
                 //                let GyroY = deviceMotion!.rotationRate.y
                 //                let GyroZ = deviceMotion!.rotationRate.z
@@ -131,12 +131,16 @@ class InterfaceController: WKInterfaceController {
                 //                print ( "Gyro: \(currenTime) \(GyroX), \(GyroY), \(GyroZ)")
                 //                print ( "Acc : \(currenTime) \(AccX), \(AccY), \(AccZ)")
                 
+                //                print ("GyroX: \(GyroX)")
+                //                print("Array Gyro: \(self.gyroXData)")
+                //                print ("AccY: \(AccY)")
+                //                print("Array Acc: \(self.gyroXData)")
                 
                 self.addData(gyroXValue: GyroX, accYValue: AccY)
-                let data = self.gyroXData + self.accYData
-                if data.count == 24 {
+                let data = self.accYData
+                if data.count == 12 {
                     
-                    guard let mlMultiArray = try? MLMultiArray(shape:[24], dataType:MLMultiArrayDataType.double) else {
+                    guard let mlMultiArray = try? MLMultiArray(shape:[12], dataType:MLMultiArrayDataType.double) else {
                         fatalError("Unexpected runtime error. MLMultiArray")
                     }
                     
@@ -147,11 +151,11 @@ class InterfaceController: WKInterfaceController {
                     
                     if let result = try? Classifier().makePrediction(mlMultiArray) {
                         
-                        //                        print(result)
-                        //
-                        //                        if result != MovementType.Safe {
-                        //                            WKInterfaceDevice.current().play(.click)
-                        //                        }
+                        print(result!)
+                        
+                        if result != MovementType.Safe {
+                            WKInterfaceDevice.current().play(.click)
+                        }
                         
                         
                     }
@@ -234,16 +238,20 @@ class InterfaceController: WKInterfaceController {
     func addData(gyroXValue: Double, accYValue: Double) {
         
         if gyroXData.count == 12 {
-            //            data.removeAll()
+            // data.removeAll()
+            // gyroXData.removeLast()
             gyroXData.removeFirst()
         }
+        // gyroXData.insert(gyroXValue, at: 0)
         gyroXData.append(gyroXValue)
         
         
         if accYData.count == 12 {
-            //            data.removeAll()
+            // data.removeAll()
+            // accYData.removeLast()
             accYData.removeFirst()
         }
+        // accYData.insert(accYValue, at: 0)
         accYData.append(accYValue)
     }
 }

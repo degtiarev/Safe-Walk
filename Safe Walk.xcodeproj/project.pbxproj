@@ -22,8 +22,10 @@
 		DC5D727D209E12D900A695B6 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D727C209E12D900A695B6 /* ComplicationController.swift */; };
 		DC5D727F209E12D900A695B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5D727E209E12D900A695B6 /* Assets.xcassets */; };
 		DC5D7291209E7CEF00A695B6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5D7290209E7CEF00A695B6 /* HealthKit.framework */; };
-		DC5D7294209E824900A695B6 /* UserActivityType.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DC5D7293209E824900A695B6 /* UserActivityType.mlmodel */; };
-		DC5D7296209E828A00A695B6 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D7295209E828A00A695B6 /* Classifier.swift */; };
+		DC5D729C209FB79C00A695B6 /* UserActivityType.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DC5D729B209FB79C00A695B6 /* UserActivityType.mlmodel */; };
+		DC5D729E209FBB3100A695B6 /* UserActivityType.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DC5D729D209FBB3100A695B6 /* UserActivityType.mlmodel */; };
+		DC5D729F209FBB4300A695B6 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D7295209E828A00A695B6 /* Classifier.swift */; };
+		DC5D72A0209FBB4600A695B6 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D7295209E828A00A695B6 /* Classifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,8 +92,9 @@
 		DC5D7281209E12DA00A695B6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		DC5D7290209E7CEF00A695B6 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		DC5D7292209E7CEF00A695B6 /* Safe Walk WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Safe Walk WatchKit Extension.entitlements"; sourceTree = "<group>"; };
-		DC5D7293209E824900A695B6 /* UserActivityType.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = UserActivityType.mlmodel; sourceTree = "<group>"; };
 		DC5D7295209E828A00A695B6 /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
+		DC5D729B209FB79C00A695B6 /* UserActivityType.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = UserActivityType.mlmodel; sourceTree = "<group>"; };
+		DC5D729D209FBB3100A695B6 /* UserActivityType.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = UserActivityType.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,8 @@
 				DC5D7255209E12D500A695B6 /* ViewController.swift */,
 				DC5D7257209E12D500A695B6 /* Main.storyboard */,
 				DC5D725A209E12D800A695B6 /* Assets.xcassets */,
+				DC5D7295209E828A00A695B6 /* Classifier.swift */,
+				DC5D729D209FBB3100A695B6 /* UserActivityType.mlmodel */,
 				DC5D725C209E12D800A695B6 /* LaunchScreen.storyboard */,
 				DC5D725F209E12D800A695B6 /* Info.plist */,
 			);
@@ -162,12 +167,11 @@
 			children = (
 				DC5D7292209E7CEF00A695B6 /* Safe Walk WatchKit Extension.entitlements */,
 				DC5D7276209E12D900A695B6 /* InterfaceController.swift */,
-				DC5D7295209E828A00A695B6 /* Classifier.swift */,
-				DC5D7293209E824900A695B6 /* UserActivityType.mlmodel */,
 				DC5D7278209E12D900A695B6 /* ExtensionDelegate.swift */,
 				DC5D727A209E12D900A695B6 /* NotificationController.swift */,
 				DC5D727C209E12D900A695B6 /* ComplicationController.swift */,
 				DC5D727E209E12D900A695B6 /* Assets.xcassets */,
+				DC5D729B209FB79C00A695B6 /* UserActivityType.mlmodel */,
 				DC5D7280209E12D900A695B6 /* Info.plist */,
 				DC5D7281209E12DA00A695B6 /* PushNotificationPayload.apns */,
 			);
@@ -322,6 +326,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC5D729F209FBB4300A695B6 /* Classifier.swift in Sources */,
+				DC5D729E209FBB3100A695B6 /* UserActivityType.mlmodel in Sources */,
 				DC5D7256209E12D500A695B6 /* ViewController.swift in Sources */,
 				DC5D7254209E12D500A695B6 /* AppDelegate.swift in Sources */,
 			);
@@ -331,12 +337,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC5D729C209FB79C00A695B6 /* UserActivityType.mlmodel in Sources */,
 				DC5D727B209E12D900A695B6 /* NotificationController.swift in Sources */,
 				DC5D727D209E12D900A695B6 /* ComplicationController.swift in Sources */,
 				DC5D7279209E12D900A695B6 /* ExtensionDelegate.swift in Sources */,
+				DC5D72A0209FBB4600A695B6 /* Classifier.swift in Sources */,
 				DC5D7277209E12D900A695B6 /* InterfaceController.swift in Sources */,
-				DC5D7296209E828A00A695B6 /* Classifier.swift in Sources */,
-				DC5D7294209E824900A695B6 /* UserActivityType.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
