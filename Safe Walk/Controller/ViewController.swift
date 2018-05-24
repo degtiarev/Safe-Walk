@@ -79,8 +79,6 @@ class ViewController: UIViewController {
                                 AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
                             }
                             
-                            
-                            
                         }
                         
                         

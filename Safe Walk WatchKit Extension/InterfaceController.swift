@@ -59,6 +59,7 @@ class InterfaceController: WKInterfaceController {
     var gyroXData = [Double]()
     var accYData = [Double]()
     
+    
     // MARK - WKInterfaceController events
     
     override func awake(withContext context: Any?) {
@@ -137,10 +138,10 @@ class InterfaceController: WKInterfaceController {
                 //                print("Array Acc: \(self.gyroXData)")
                 
                 self.addData(gyroXValue: GyroX, accYValue: AccY)
-                let data = self.accYData
-                if data.count == 12 {
+                let data = self.gyroXData + self.accYData
+                if data.count == 24 {
                     
-                    guard let mlMultiArray = try? MLMultiArray(shape:[12], dataType:MLMultiArrayDataType.double) else {
+                    guard let mlMultiArray = try? MLMultiArray(shape:[24], dataType:MLMultiArrayDataType.double) else {
                         fatalError("Unexpected runtime error. MLMultiArray")
                     }
                     
@@ -149,11 +150,11 @@ class InterfaceController: WKInterfaceController {
                     }
                     
                     
-                    if let result = try? Classifier().makePrediction(mlMultiArray) {
+                    if let result = try? WatchClassifier().makePrediction(mlMultiArray) {
                         
                         print(result!)
                         
-                        if result != MovementType.Safe {
+                        if result == MovementType.Safe {
                             WKInterfaceDevice.current().play(.click)
                         }
                         
@@ -227,12 +228,12 @@ class InterfaceController: WKInterfaceController {
         
     }
     
+    
     func working() {
         statusLabel.setText("On")
         timer.setDate(Date(timeIntervalSinceNow: 0.0))
         timer.start()
     }
-    
     
     
     func addData(gyroXValue: Double, accYValue: Double) {

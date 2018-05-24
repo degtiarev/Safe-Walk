@@ -22,10 +22,10 @@
 		DC5D727D209E12D900A695B6 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D727C209E12D900A695B6 /* ComplicationController.swift */; };
 		DC5D727F209E12D900A695B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5D727E209E12D900A695B6 /* Assets.xcassets */; };
 		DC5D7291209E7CEF00A695B6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5D7290209E7CEF00A695B6 /* HealthKit.framework */; };
-		DC5D729C209FB79C00A695B6 /* UserActivityType.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DC5D729B209FB79C00A695B6 /* UserActivityType.mlmodel */; };
 		DC5D729E209FBB3100A695B6 /* UserActivityType.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DC5D729D209FBB3100A695B6 /* UserActivityType.mlmodel */; };
 		DC5D729F209FBB4300A695B6 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D7295209E828A00A695B6 /* Classifier.swift */; };
-		DC5D72A0209FBB4600A695B6 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D7295209E828A00A695B6 /* Classifier.swift */; };
+		DCECD68D20B6C0A8001D4EAA /* WatchClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCECD68C20B6C0A8001D4EAA /* WatchClassifier.swift */; };
+		DCECD68F20B6C0EA001D4EAA /* WatchUserActivityType.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DCECD68E20B6C0E9001D4EAA /* WatchUserActivityType.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +93,9 @@
 		DC5D7290209E7CEF00A695B6 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		DC5D7292209E7CEF00A695B6 /* Safe Walk WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Safe Walk WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		DC5D7295209E828A00A695B6 /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
-		DC5D729B209FB79C00A695B6 /* UserActivityType.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = UserActivityType.mlmodel; sourceTree = "<group>"; };
 		DC5D729D209FBB3100A695B6 /* UserActivityType.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = UserActivityType.mlmodel; sourceTree = "<group>"; };
+		DCECD68C20B6C0A8001D4EAA /* WatchClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchClassifier.swift; sourceTree = "<group>"; };
+		DCECD68E20B6C0E9001D4EAA /* WatchUserActivityType.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = WatchUserActivityType.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,14 +141,10 @@
 		DC5D7252209E12D500A695B6 /* Safe Walk */ = {
 			isa = PBXGroup;
 			children = (
-				DC5D7253209E12D500A695B6 /* AppDelegate.swift */,
-				DC5D7255209E12D500A695B6 /* ViewController.swift */,
-				DC5D7257209E12D500A695B6 /* Main.storyboard */,
-				DC5D725A209E12D800A695B6 /* Assets.xcassets */,
-				DC5D7295209E828A00A695B6 /* Classifier.swift */,
-				DC5D729D209FBB3100A695B6 /* UserActivityType.mlmodel */,
-				DC5D725C209E12D800A695B6 /* LaunchScreen.storyboard */,
-				DC5D725F209E12D800A695B6 /* Info.plist */,
+				DCECD69320B6CD48001D4EAA /* Resources */,
+				DCECD69020B6CCD2001D4EAA /* Model */,
+				DCECD69220B6CD41001D4EAA /* Controller */,
+				DCECD69120B6CD3C001D4EAA /* View */,
 			);
 			path = "Safe Walk";
 			sourceTree = "<group>";
@@ -165,13 +162,14 @@
 		DC5D7275209E12D900A695B6 /* Safe Walk WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				DC5D7292209E7CEF00A695B6 /* Safe Walk WatchKit Extension.entitlements */,
 				DC5D7276209E12D900A695B6 /* InterfaceController.swift */,
+				DCECD68C20B6C0A8001D4EAA /* WatchClassifier.swift */,
+				DCECD68E20B6C0E9001D4EAA /* WatchUserActivityType.mlmodel */,
 				DC5D7278209E12D900A695B6 /* ExtensionDelegate.swift */,
 				DC5D727A209E12D900A695B6 /* NotificationController.swift */,
 				DC5D727C209E12D900A695B6 /* ComplicationController.swift */,
 				DC5D727E209E12D900A695B6 /* Assets.xcassets */,
-				DC5D729B209FB79C00A695B6 /* UserActivityType.mlmodel */,
+				DC5D7292209E7CEF00A695B6 /* Safe Walk WatchKit Extension.entitlements */,
 				DC5D7280209E12D900A695B6 /* Info.plist */,
 				DC5D7281209E12DA00A695B6 /* PushNotificationPayload.apns */,
 			);
@@ -184,6 +182,42 @@
 				DC5D7290209E7CEF00A695B6 /* HealthKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCECD69020B6CCD2001D4EAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC5D7295209E828A00A695B6 /* Classifier.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DCECD69120B6CD3C001D4EAA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC5D7257209E12D500A695B6 /* Main.storyboard */,
+				DC5D725C209E12D800A695B6 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DCECD69220B6CD41001D4EAA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DC5D7253209E12D500A695B6 /* AppDelegate.swift */,
+				DC5D7255209E12D500A695B6 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DCECD69320B6CD48001D4EAA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DC5D725F209E12D800A695B6 /* Info.plist */,
+				DC5D729D209FBB3100A695B6 /* UserActivityType.mlmodel */,
+				DC5D725A209E12D800A695B6 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,11 +371,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC5D729C209FB79C00A695B6 /* UserActivityType.mlmodel in Sources */,
+				DCECD68F20B6C0EA001D4EAA /* WatchUserActivityType.mlmodel in Sources */,
+				DCECD68D20B6C0A8001D4EAA /* WatchClassifier.swift in Sources */,
 				DC5D727B209E12D900A695B6 /* NotificationController.swift in Sources */,
 				DC5D727D209E12D900A695B6 /* ComplicationController.swift in Sources */,
 				DC5D7279209E12D900A695B6 /* ExtensionDelegate.swift in Sources */,
-				DC5D72A0209FBB4600A695B6 /* Classifier.swift in Sources */,
 				DC5D7277209E12D900A695B6 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,7 +543,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "Safe Walk WatchKit Extension/Safe Walk WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z8822C26BQ;
+				DEVELOPMENT_TEAM = F2X9TX4X64;
 				INFOPLIST_FILE = "Safe Walk WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -532,7 +566,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "Safe Walk WatchKit Extension/Safe Walk WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z8822C26BQ;
+				DEVELOPMENT_TEAM = F2X9TX4X64;
 				INFOPLIST_FILE = "Safe Walk WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -555,7 +589,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z8822C26BQ;
+				DEVELOPMENT_TEAM = F2X9TX4X64;
 				IBSC_MODULE = Safe_Walk_WatchKit_Extension;
 				INFOPLIST_FILE = "Safe Walk WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "delexa.Safe-Walk.watchkitapp";
@@ -574,7 +608,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z8822C26BQ;
+				DEVELOPMENT_TEAM = F2X9TX4X64;
 				IBSC_MODULE = Safe_Walk_WatchKit_Extension;
 				INFOPLIST_FILE = "Safe Walk WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "delexa.Safe-Walk.watchkitapp";
@@ -592,8 +626,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z8822C26BQ;
-				INFOPLIST_FILE = "Safe Walk/Info.plist";
+				DEVELOPMENT_TEAM = F2X9TX4X64;
+				INFOPLIST_FILE = "$(SRCROOT)/Safe Walk/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -610,8 +644,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z8822C26BQ;
-				INFOPLIST_FILE = "Safe Walk/Info.plist";
+				DEVELOPMENT_TEAM = F2X9TX4X64;
+				INFOPLIST_FILE = "$(SRCROOT)/Safe Walk/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
